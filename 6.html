@@ -25,5 +25,23 @@
     } else {
       console.log('sorry mate');
     }
+
+    // 6f
+    let numb = Math.random();
+    let result = '';
+    let guess = 'head';
+    if (numb < 1 / 2) {
+      result = 'head';
+    } else {
+      result = 'tail';
+    }
+
+    // if (guess === result) {
+    //   console.log('you win');
+    // } else {
+    //   console.log('you lose');
+    // }
+
+    guess === result ? console.log('you win') : console.log('you lose');
   </script>
 </html>
