@@ -9,27 +9,60 @@
     <p>RPS</p>
     <button
       onclick=" const randomNumber =Math.random();
-      const comM = ''
+      console.log(randomNumber);
+      let comM = ''
       const player = 'rock'
+      let result = '';
+
     if (randomNumber >= 0 && randomNumber < 1/3){
-         comM = 'rock';
+         comM = 'rock'
     }else if (randomNumber >= 1/3 && randomNumber < 2/3){
-         comM = 'scissors';
-    }else(randomNumber >= 2/3 && randomNumber < 1);{
-         comM = 'papper'
+         comM = 'scissors'
+    }else if (randomNumber >= 2/3 && randomNumber < 1){
+      comM = 'papper'
     }
+    
+    console.log(comM)
     if (comM === 'rock'){
-        console.log('Draw')
+        result = 'draw'
     }else if (comM === 'scissors'){
-        console.log('player win')
-    }else {
-        console.log('player lose')
+        result = 'you win'
+    }else if(comM === 'papper'){
+        result = 'you lose'
     }
+
+    alert(`you pick ${player} and computer pick ${comM} and ${result}`);
     "
     >
       Rock
     </button>
-    <button>Papper</button>
+    <button
+      onclick=" 
+    const player1 = 'scissors'
+    
+
+  if (randomNumber >= 0 && randomNumber < 1/3){
+       comM = 'rock'
+  }else if (randomNumber >= 1/3 && randomNumber < 2/3){
+       comM = 'scissors'
+  }else if (randomNumber >= 2/3 && randomNumber < 1){
+    comM = 'papper'
+  }
+  
+  console.log(comM)
+  if (comM === 'rock'){
+      result = 'draw'
+  }else if (comM === 'scissors'){
+      result = 'you win'
+  }else if(comM === 'papper'){
+      result = 'you lose'
+  }
+
+  alert(`you pick ${player} and computer pick ${comM} and ${result}`);
+  "
+    >
+      Papper
+    </button>
     <button>Scissors</button>
   </body>
   <script></script>
