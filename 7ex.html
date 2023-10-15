@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 7a - 7c
+    function greet(name) {
+      name ? console.log(`hello ${name}`) : console.log('hi there');
+    }
+    greet('simon');
+    greet('jack');
+    greet('krouser');
+    greet();
+
+    // 7d
+    function convertFC(number, degree) {
+      degree === 'c'
+        ? console.log((number * 9) / 5 + 32)
+        : console.log(((number - 32) * 5) / 9);
+    }
+    convertFC(25, 'c');
+    convertFC(86, 'f');
+  </script>
+</html>

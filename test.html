@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="playerMove('rock')">rock</button>
+    <button onclick="playerMove('paper')">paper</button>
+    <button onclick="playerMove('scissors')">scissors</button>
+  </body>
+  <script>
+    function playerMove(playGame) {
+      const comM = computerMove();
+      let result = '';
+      if (playGame === 'scissors') {
+        if (comM === 'rock') {
+          result = 'you lose';
+        } else if (comM === 'paper') {
+          result = 'you win';
+        } else if (comM === 'scissors') {
+          result = 'draw';
+        }
+      } else if (playGame === 'paper') {
+        if (comM === 'rock') {
+          result = 'you win';
+        } else if (comM === 'paper') {
+          result = 'draw';
+        } else if (comM === 'scissors') {
+          result = 'you lose';
+        }
+      } else if (playGame === 'rock') {
+        if (comM === 'rock') {
+          result = 'draw';
+        } else if (comM === 'paper') {
+          result = 'you lose';
+        } else if (comM === 'scissors') {
+          result = 'you win';
+        }
+      }
+      alert(
+        ` you pick a ${playGame} and computer pick a ${comM} and ${result}`
+      );
+    }
+
+    function computerMove() {
+      const comM = Math.random();
+      if (comM >= 0 && comM < 1 / 3) {
+        result = 'rock';
+      } else if (comM >= 1 / 3 && comM < 2 / 3) {
+        result = 'paper';
+      } else if (comM >= 2 / 3 && comM < 1) {
+        result = 'scissors';
+      }
+      return result;
+    }
+  </script>
+</html>
