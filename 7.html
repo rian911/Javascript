@@ -13,5 +13,17 @@
     }
 
     Dfunc();
+    // parameter
+    function tax(shop, tax, money) {
+      cost = shop + shop * tax;
+      total = money - cost;
+      console.log(
+        `money = ${money} - cost ${shop} + tax ${
+          shop * tax
+        }, kembalian = ${total}`
+      );
+    }
+
+    tax(2000, 0.1, 10000);
   </script>
 </html>
