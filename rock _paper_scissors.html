@@ -8,21 +8,10 @@
   <body>
     <p>RPS</p>
     <button
-      onclick=" const randomNumber =Math.random();
-      console.log(randomNumber);
-      let comM = ''
-      const player = 'rock'
-      let result = '';
+      onclick=" 
+     const comM = pickComputer();
+    const player1 = 'rock'
 
-    if (randomNumber >= 0 && randomNumber < 1/3){
-         comM = 'rock'
-    }else if (randomNumber >= 1/3 && randomNumber < 2/3){
-         comM = 'scissors'
-    }else if (randomNumber >= 2/3 && randomNumber < 1){
-      comM = 'papper'
-    }
-    
-    console.log(comM)
     if (comM === 'rock'){
         result = 'draw'
     }else if (comM === 'scissors'){
@@ -31,39 +20,61 @@
         result = 'you lose'
     }
 
-    alert(`you pick ${player} and computer pick ${comM} and ${result}`);
+    alert(`you pick ${player1} and computer pick ${comM} and ${result}`);
     "
     >
       Rock
     </button>
     <button
       onclick=" 
-    const player1 = 'scissors'
-    
+      const comM2 = pickComputer();
+    const player2 = 'papper'
+     
+      if (comM2 === 'rock'){
+          result = 'you win'
+      }else if (comM2 === 'scissors'){
+          result = 'you lose'
+      }else if(comM2 === 'papper'){
+          result = 'draw'
+      }
 
-  if (randomNumber >= 0 && randomNumber < 1/3){
-       comM = 'rock'
-  }else if (randomNumber >= 1/3 && randomNumber < 2/3){
-       comM = 'scissors'
-  }else if (randomNumber >= 2/3 && randomNumber < 1){
-    comM = 'papper'
-  }
-  
-  console.log(comM)
-  if (comM === 'rock'){
-      result = 'draw'
-  }else if (comM === 'scissors'){
-      result = 'you win'
-  }else if(comM === 'papper'){
-      result = 'you lose'
-  }
-
-  alert(`you pick ${player} and computer pick ${comM} and ${result}`);
+  alert(`you pick ${player2} and computer pick ${comM2} and ${result}`);
   "
     >
       Papper
     </button>
-    <button>Scissors</button>
+    <button
+      onclick=" 
+    const comM3 = pickComputer();
+  const player3 = 'scissors'
+   
+    if (comM3 === 'rock'){
+        result = 'you lose'
+    }else if (comM3 === 'scissors'){
+        result = 'draw'
+    }else if(comM3 === 'papper'){
+        result = 'you win'
+    }
+
+alert(`you pick ${player3} and computer pick ${comM3} and ${result}`);
+"
+    >
+      Scissors
+    </button>
   </body>
-  <script></script>
+  <script>
+    let result = '';
+    function pickComputer() {
+      const randomNumber = Math.random();
+      let comM = '';
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        comM = 'rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        comM = 'scissors';
+      } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        comM = 'papper';
+      }
+      return comM;
+    }
+  </script>
 </html>
