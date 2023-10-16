@@ -16,5 +16,22 @@
     }
     console.log(highandlow(20, 80));
     console.log(highandlow(120, 80));
+
+    function ranKing(value) {
+      if (value <= 100 && value >= 80) {
+        alert(value + 'u got A');
+        return;
+      } else if (value < 80 && value >= 60) {
+        alert(value + ' u got B');
+        return;
+      } else if (value < 60 && value >= 50) {
+        alert(value + 'u got C');
+        return;
+      } else if (value < 50) {
+        alert(value + 'u got D');
+        return;
+      }
+    }
+    ranKing(44);
   </script>
 </html>
