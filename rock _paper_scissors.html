@@ -14,6 +14,7 @@
     function playGame(playerMove) {
       const comM = pickComM();
 
+      const score = JSON.parse(localStorage.getItem('score'));
       let result = '';
 
       if (playerMove === 'scissors') {
@@ -41,6 +42,9 @@
           result = 'you lose';
         }
       }
+
+      localStorage.setItem('score', JSON.stringify(result));
+
       alert(` You pick ${playerMove} computer pick ${comM} and ${result}`);
     }
 
