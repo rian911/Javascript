@@ -38,5 +38,36 @@
     JSON.parse(jsonStr);
 
     console.log(JSON.parse(jsonStr));
+
+    // auto boxing (add properties and method to value)
+    console.log('title'.length);
+    console.log('title'.toUpperCase());
+
+    // object are reference
+    const objec1 = {
+      message: 'hello',
+    };
+    const object2 = objec1;
+    // diatas bukan objek2 = object2 secara mutlah
+    // tapi object2 memberi value dengan alamat (reference) object1
+    // dibawah adalah contohnya
+    objec1.message = 'goodjob';
+    // seharusnya jika coding seperti diatas hanya akan mengubah value dari objec1 dan tidak dengan object2, tapi dengan maksut object are reference sebenarnya dalam sebuat object itu hanya sebuah alamat
+    console.log(objec1);
+    console.log(object2);
+    const object3 = {
+      message: 'goodjob',
+    };
+    console.log(objec1 === object2);
+    console.log(objec1 === object3);
+
+    // object shortcut (destructuring) easy way to take property out of object
+    const object4 = {
+      yolo: 'hai',
+      stub: 12345,
+    };
+    // const message = object4.message;
+    const { yolo, stub } = object4;
+    console.log(yolo, stub);
   </script>
 </html>
