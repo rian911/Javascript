@@ -16,15 +16,19 @@
     </button>
   </body>
   <script>
-    let score = JSON.parse(localStorage.getItem('score'));
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      lose: 0,
+      draw: 0,
+    };
 
-    if (score === null) {
-      score = {
-        win: 0,
-        lose: 0,
-        draw: 0,
-      };
-    }
+    // if (score === null) {
+    //   score = {
+    //     win: 0,
+    //     lose: 0,
+    //     draw: 0,
+    //   };
+    // }
     function playGame(playerMove) {
       const comM = pickComM();
 
