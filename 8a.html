@@ -8,14 +8,12 @@
   <body></body>
   <script>
     const product1 = {
-      name: 'basketball',
-      price: 209500000,
-      ['delivery-time']: '3-days',
+      name: 'apel',
+      price: 500,
     };
     const product2 = {
-      name: 'lambo',
-      price: 209555,
-      ['delivery-time']: '3-days',
+      name: 'apel',
+      price: 500,
     };
     console.log(product1);
     product1.price += 500;
@@ -30,5 +28,26 @@
     }
 
     compare(product1, product2);
+
+    const p1 = {
+      name: 'bakso',
+      price: 123,
+    };
+    const p2 = {
+      name: 'bakso',
+      price: 123,
+    };
+    function isSameProduct(p1, p2) {
+      if (p1.name === p2.name && p1.price === p2.price) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log(isSameProduct(p1, p2));
+    isSameProduct(product1, product2);
+    // 8f lower case
+    console.log('HELLO'.toLocaleLowerCase());
+    console.log('HELLO'.repeat(2));
   </script>
 </html>
