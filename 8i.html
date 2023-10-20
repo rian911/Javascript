@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8i</title>
+  </head>
+  <body>
+    <button onclick="playGame('head')">head</button>
+    <button onclick="playGame('tail')">tail</button>
+  </body>
+  <script>
+    function playGame(guess) {
+      let comM = Math.random();
+      if (comM <= 1 / 2) {
+        comM = 'head';
+      } else {
+        comM = 'tail';
+      }
+      guess === comM ? console.log('you win') : console.log('you lose');
+    }
+  </script>
+</html>
