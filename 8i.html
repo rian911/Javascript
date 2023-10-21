@@ -10,7 +10,7 @@
     <button onclick="playGame('tail')">tail</button>
   </body>
   <script>
-    let score = {
+    const score = JSON.parse(localStorage.getItem('score')) || {
       win: 0,
       lose: 0,
     };
@@ -33,7 +33,9 @@
       } else {
         score.lose++;
       }
+
       console.log(score);
+      localStorage.setItem('score', JSON.stringify(score));
     }
   </script>
 </html>
