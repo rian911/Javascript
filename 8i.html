@@ -10,14 +10,30 @@
     <button onclick="playGame('tail')">tail</button>
   </body>
   <script>
+    let score = {
+      win: 0,
+      lose: 0,
+    };
     function playGame(guess) {
       let comM = Math.random();
-      if (comM <= 1 / 2) {
-        comM = 'head';
+      // if (comM <= 1 / 2) {
+      //   comM = 'head';
+      // } else {
+      //   comM = 'tail';
+      // }
+      // guess === comM
+      //   ? score.win++ && console.log('you win')
+      //   : score.lose++ && console.log('you lose');
+      // console.log(score);
+      const result = comM < 0.5 ? 'head' : 'tail';
+      console.log(guess === result ? 'You win' : 'You lose');
+
+      if (guess === result) {
+        score.win++;
       } else {
-        comM = 'tail';
+        score.lose++;
       }
-      guess === comM ? console.log('you win') : console.log('you lose');
+      console.log(score);
     }
   </script>
 </html>
