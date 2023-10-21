@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Youtube subscribe button</h2>
+    <button
+      class="but"
+      onclick="const jsbut = document.querySelector('.but'); if(jsbut.innerHTML === 'Subscribe'){
+        jsbut.innerHTML = 'Subscribed'
+    }else{
+        jsbut.innerHTML = 'Subscribe'
+    }"
+    >
+      Subscribe
+    </button>
+  </body>
+  <script>
+    function subs() {
+      if (document.body.bu) {
+        document.querySelector('button').innerHTML = 'Subscribed';
+      } else {
+        document.querySelector('button').innerHTML = 'Subscribe';
+      }
+    }
+  </script>
+</html>
