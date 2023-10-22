@@ -12,8 +12,23 @@
     <input class="js-input" />
     <button onclick="calShip()">check</button>
     <p class="js-total"></p>
+    <br />
+    <p>license drive</p>
+    <input class="js-age" placeholder="Enter your age" />
+    <button onclick="simLicense()">check</button>
+    <p class="js-view"></p>
   </body>
   <script>
+    function simLicense() {
+      const age = document.querySelector('.js-age');
+      let checkAge = Number(age.value);
+
+      if (checkAge < 18) {
+        document.querySelector('.js-view').innerHTML = 'Sorry your under age';
+      } else if (checkAge >= 18) {
+        document.querySelector('.js-view').innerHTML = 'Congrats';
+      }
+    }
     function calShip() {
       const valI = document.querySelector('.js-input');
       let cost = Number(valI.value);
