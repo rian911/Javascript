@@ -8,8 +8,21 @@
   <body>
     <h2>Youtube subscribe button</h2>
     <button class="but" onclick="subs()">Subscribe</button>
+    <p>Amazon Shipping</p>
+    <input class="js-input" />
+    <button onclick="calShip()">check</button>
+    <p class="js-total"></p>
   </body>
   <script>
+    function calShip() {
+      const valI = document.querySelector('.js-input');
+      let cost = Number(valI.value);
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+
+      document.querySelector('.js-total').innerHTML = `$${cost}`;
+    }
     function subs() {
       const jsbut = document.querySelector('.but');
       if (jsbut.innerText === 'Subscribe') {
