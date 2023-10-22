@@ -7,23 +7,15 @@
   </head>
   <body>
     <h2>Youtube subscribe button</h2>
-    <button
-      class="but"
-      onclick="const jsbut = document.querySelector('.but'); if(jsbut.innerHTML === 'Subscribe'){
-        jsbut.innerHTML = 'Subscribed'
-    }else{
-        jsbut.innerHTML = 'Subscribe'
-    }"
-    >
-      Subscribe
-    </button>
+    <button class="but" onclick="subs()">Subscribe</button>
   </body>
   <script>
     function subs() {
-      if (document.body.bu) {
-        document.querySelector('button').innerHTML = 'Subscribed';
+      const jsbut = document.querySelector('.but');
+      if (jsbut.innerText === 'Subscribe') {
+        jsbut.innerHTML = 'Subscribed';
       } else {
-        document.querySelector('button').innerHTML = 'Subscribe';
+        jsbut.innerHTML = 'Subscribe';
       }
     }
   </script>
