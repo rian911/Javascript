@@ -12,8 +12,21 @@
     <button onclick="tekan('head')">head</button>
     <button onclick="tekan('tail')">tail</button>
     <p class="textp"></p>
+    <p>Your name</p>
+    <input
+      type="text"
+      class="yourname"
+      onkeydown="if(event.key === 'Enter'){display()}"
+    />
+    <button onclick="display()">display</button>
+    <p class="name"></p>
   </body>
   <script>
+    function display() {
+      const yourName = document.querySelector('.yourname').value;
+      document.querySelector('.name').innerHTML = `Your name : ${yourName}`;
+    }
+
     function tekan(pilihan) {
       const value = pilihan;
       document.querySelector('.textp').innerHTML = `You chose ${value}`;
