@@ -8,9 +8,18 @@
   <body>
     <button>Hello</button>
     <button class="pak">Hello</button>
+    <br />
+    <button onclick="tekan('head')">head</button>
+    <button onclick="tekan('tail')">tail</button>
+    <p class="textp"></p>
   </body>
   <script>
+    function tekan(pilihan) {
+      const value = pilihan;
+      document.querySelector('.textp').innerHTML = `You chose ${value}`;
+    }
+
     console.log(document.querySelector('button'));
-    document.querySelector('.paks').innerHTML = '9b done';
+    document.querySelector('.pak').innerHTML = '9b done';
   </script>
 </html>
