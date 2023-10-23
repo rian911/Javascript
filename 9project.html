@@ -9,7 +9,12 @@
     <h2>Youtube subscribe button</h2>
     <button class="but" onclick="subs()">Subscribe</button>
     <p>Amazon Shipping</p>
-    <input class="js-input" />
+    <input
+      class="js-input"
+      onkeydown="if (event.key === 'Enter'){
+      calShip();
+    }"
+    />
     <button onclick="calShip()">check</button>
     <p class="js-total"></p>
     <br />
