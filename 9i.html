@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chart qty</title>
+  </head>
+  <body>
+    <button onclick="displayQty();">Show Quantity</button>
+    <!-- shortcut qty++ -->
+    <button onclick="cartC(+1)">Add to Cart</button>
+    <button onclick="cartC(-2)">-2</button>
+    <button onclick="cartC(-3)">-3</button>
+    <button onclick="cartC(-1)">Remofe from Cart</button>
+    <!-- alternate -->
+    <button onclick="cartC(2)">+2</button>
+    <button onclick="cartC(3)">+3</button>
+    <button onclick="cartC(4)">+4</button>
+    <button onclick="cartC(5)">+5</button>
+    <button onclick="qty= 0; displayQty();">Reset</button>
+    <p class="display"></p>
+  </body>
+  <script>
+    let qty = 0;
+    displayQty();
+    function cartC(value) {
+      if (qty + value > 10) {
+        alert('qty full');
+        return;
+      } else if (qty + value < 0) {
+        alert('not enough stock');
+        return;
+      } else {
+        qty += value;
+        displayQty();
+        console.log(`Cart quantity: ${qty}`);
+      }
+    }
+
+    function displayQty() {
+      document.querySelector('.display').innerHTML = `Cart quantity: ${qty}`;
+    }
+  </script>
+</html>
