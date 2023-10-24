@@ -36,12 +36,12 @@
     }
     function calShip() {
       const valI = document.querySelector('.js-input');
-      let cost = Number(valI.value);
-      if (cost < 40) {
-        cost = cost + 10;
+      let cost = Number(valI.value) * 100;
+      if (cost < 4000) {
+        cost = cost + 1000;
       }
 
-      document.querySelector('.js-total').innerHTML = `$${cost}`;
+      document.querySelector('.js-total').innerHTML = `$${cost / 100}`;
     }
     function subs() {
       const jsbut = document.querySelector('.but');
