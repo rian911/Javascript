@@ -22,8 +22,16 @@
     <input class="js-age" placeholder="Enter your age" />
     <button onclick="simLicense()">check</button>
     <p class="js-view"></p>
+
+    <p>test</p>
+    <input class="input-1" type="text" onkeyup="checkit()" />
+    <p class="test"></p>
   </body>
   <script>
+    function checkit() {
+      const auti = document.querySelector('.input-1').value;
+      document.querySelector('.test').innerHTML = auti;
+    }
     function simLicense() {
       const age = document.querySelector('.js-age');
       let checkAge = Number(age.value);
