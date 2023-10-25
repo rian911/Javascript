@@ -7,8 +7,16 @@
       .but {
         background-color: black;
         color: white;
-        padding: 5px 10px;
+        padding: 10px 15px;
         border-radius: 20px;
+        border: none;
+      }
+      .subs-but {
+        background-color: greenyellow;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: none;
       }
     </style>
     <title>Document</title>
@@ -63,8 +71,10 @@
       const jsbut = document.querySelector('.but');
       if (jsbut.innerText === 'Subscribe') {
         jsbut.innerHTML = 'Subscribed';
+        jsbut.classList.add('subs-but');
       } else {
         jsbut.innerHTML = 'Subscribe';
+        jsbut.classList.remove('subs-but');
       }
     }
   </script>
