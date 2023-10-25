@@ -25,6 +25,43 @@
       .js-input {
         padding: 10px;
       }
+
+      .calsip {
+        border: none;
+        padding: 12px 25px;
+        background-color: greenyellow;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .license {
+        font-weight: bold;
+      }
+
+      .js-age {
+        padding: 10px;
+      }
+
+      .sim {
+        border: none;
+        background-color: purple;
+        color: white;
+        padding: 12px 40px;
+      }
+
+      .type {
+        margin-top: 40px;
+      }
+
+      .input-1 {
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      .test {
+        font-weight: bold;
+        color: blue;
+      }
     </style>
     <title>Document</title>
   </head>
@@ -38,15 +75,15 @@
       calShip();
     }"
     />
-    <button onclick="calShip()">check</button>
+    <button class="calsip" onclick="calShip()">check</button>
     <p class="js-total"></p>
     <br />
-    <p>license drive</p>
+    <p class="license">license drive</p>
     <input class="js-age" placeholder="Enter your age" />
-    <button onclick="simLicense()">check</button>
+    <button class="sim" onclick="simLicense()">check</button>
     <p class="js-view"></p>
 
-    <p>test</p>
+    <p class="type">Type what u want</p>
     <input class="input-1" type="text" onkeyup="checkit()" />
     <p class="test"></p>
   </body>
