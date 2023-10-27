@@ -21,11 +21,23 @@
         margin-right: 20px;
       }
       .sce {
-        background-color: gray;
+        background-color: rgb(214, 210, 210);
         border: none;
         padding: 15px;
         border-radius: 8px;
         font-weight: bold;
+      }
+      .on {
+        padding: 15px;
+        border: none;
+        font-weight: bold;
+      }
+      .off {
+        padding: 15px;
+        border: none;
+        font-weight: bold;
+        color: white;
+        background-color: black;
       }
     </style>
     <title>Document</title>
@@ -36,5 +48,22 @@
     <!-- 10b -->
     <button class="req">Request Now</button>
     <button class="sce">Schedule for later</button>
+    <!-- 10c -->
+    <button class="js-button">Test</button>
+    <button class="on" onclick="play();">Gaming</button>
   </body>
+  <script>
+    const button = document.querySelector('.js-button');
+    console.log(button.classList.contains('js-button'));
+    // check an element has a class
+
+    function play() {
+      const isoff = document.querySelector('.on');
+      if (!isoff.classList.contains('off')) {
+        isoff.classList.add('off');
+      } else {
+        isoff.classList.remove('off');
+      }
+    }
+  </script>
 </html>
