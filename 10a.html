@@ -50,15 +50,18 @@
     <button class="sce">Schedule for later</button>
     <!-- 10c -->
     <button class="js-button">Test</button>
-    <button class="on" onclick="play();">Gaming</button>
+    <button class="on jb1" onclick="play('.jb1');">1</button>
+    <button class="on jb2" onclick="play('.jb2');">2</button>
+    <button class="on jb3" onclick="play('.jb3');">3</button>
   </body>
   <script>
     const button = document.querySelector('.js-button');
     console.log(button.classList.contains('js-button'));
     // check an element has a class
+    // 10d
+    function play(value) {
+      const isoff = document.querySelector(value);
 
-    function play() {
-      const isoff = document.querySelector('.on');
       if (!isoff.classList.contains('off')) {
         isoff.classList.add('off');
       } else {
