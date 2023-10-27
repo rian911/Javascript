@@ -63,9 +63,17 @@
       const isoff = document.querySelector(value);
 
       if (!isoff.classList.contains('off')) {
+        isprevOFF();
         isoff.classList.add('off');
       } else {
         isoff.classList.remove('off');
+      }
+    }
+
+    function isprevOFF() {
+      const butoff = document.querySelector('.off');
+      if (butoff) {
+        butoff.classList.remove('off');
       }
     }
   </script>
