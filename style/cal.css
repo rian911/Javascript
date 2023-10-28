@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  color: white;
+}
+.display {
+  color: white;
+  font-size: 30px;
+}
+.math {
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: orange;
+  margin: 5px;
+}
+button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+  margin: 5px;
+}
+.clear {
+  border: none;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  border-radius: 0%;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  background-color: rgb(9, 185, 244);
+  margin: 5px;
+}
+.hasil {
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  background-color: rgb(9, 185, 244);
+  margin: 5px;
+}
