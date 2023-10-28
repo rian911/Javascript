@@ -105,8 +105,14 @@
     function calShip() {
       const valI = document.querySelector('.js-input');
       let cost = Number(valI.value) * 100;
-      if (cost < 4000) {
-        cost = cost + 1000;
+      document.querySelector('.js-total').innerHTML = '';
+      if (cost < 0) {
+        document.querySelector('.js-total').innerHTML = 'cannot be less than 0';
+        return;
+      } else {
+        if (cost < 4000) {
+          cost = cost + 1000;
+        }
       }
 
       document.querySelector('.js-total').innerHTML = `$${cost / 100}`;
