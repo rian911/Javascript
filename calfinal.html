@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .display {
+        color: white;
+        font-size: 30px;
+      }
+      .math {
+        border: none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: orange;
+        margin: 5px;
+      }
+      button {
+        border: none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 30px;
+        background-color: white;
+        margin: 5px;
+      }
+      .clear {
+        border: none;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        border-radius: 0%;
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+        background-color: rgb(9, 185, 244);
+        margin: 5px;
+      }
+      .hasil {
+        border: none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+        background-color: rgb(9, 185, 244);
+        margin: 5px;
+      }
+    </style>
+    <title>Cal</title>
+  </head>
+  <body>
+    <p class="display"></p>
+    <p>
+      <button onclick=" calC(1);">1</button>
+      <button onclick="calC(2);">2</button>
+      <button onclick="calC(3);">3</button>
+      <button class="math" onclick="calC(' + ') ">+</button>
+      <button
+        onclick="calculation = eval(calculation); console.log(calculation)
+        localStorage.setItem('calculation', calculation)
+        displayCal();
+        "
+        class="hasil"
+      >
+        =
+      </button>
+    </p>
+    <p>
+      <button onclick="calC(4);">4</button>
+      <button onclick="calC(5);">5</button>
+      <button onclick="calC(6);">6</button>
+      <button class="math" onclick="calC(' - '); ">-</button>
+    </p>
+    <p>
+      <button onclick="calC(7);">7</button>
+      <button onclick="calC(8);">8</button>
+      <button onclick="calC(9);">9</button>
+      <button class="math" onclick="calC(' * '); ">*</button>
+    </p>
+    <p>
+      <button onclick="calC(0);">0</button>
+
+      <button class="math" onclick="calC(' / '); ">/</button>
+      <button
+        class="clear"
+        onclick="calculation = ''; saveCal();  displayCal(); "
+      >
+        Clear
+      </button>
+    </p>
+  </body>
+  <script>
+    let calculation = localStorage.getItem('calculation') || '';
+
+    displayCal();
+
+    function displayCal() {
+      document.querySelector('.display').innerHTML =
+        localStorage.getItem('calculation');
+    }
+    function calC(value) {
+      calculation += value;
+      console.log(calculation);
+      localStorage.setItem('calculation', calculation);
+      displayCal();
+    }
+
+    // optional for reuse code
+    function saveCal() {
+      localStorage.setItem('calculation', calculation);
+    }
+  </script>
+</html>
