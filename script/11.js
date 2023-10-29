@@ -1,0 +1,7 @@
+const todoList = [];
+function addList() {
+  const inputElement = document.querySelector('.js-input');
+  const name = inputElement.value;
+  todoList.push(name);
+  console.log(todoList);
+}
