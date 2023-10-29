@@ -41,12 +41,28 @@
     }
 
     // non standart loop
-
+    // its good using while
     let randomNumber = 0;
 
     while (randomNumber < 0.7) {
       randomNumber = Math.random();
     }
     console.log(randomNumber);
+
+    const todoList = ['eat', 'drink', 'poop'];
+
+    for (let y = 0; y < todoList.length; y++) {
+      const value = todoList[y];
+      console.log(value);
+    }
+
+    const number = [1, 2, 3, 5, 99];
+    let total = 0;
+
+    for (let i = 0; i < number.length; i++) {
+      const num = number[i];
+      total += num;
+    }
+    console.log(total);
   </script>
 </html>
