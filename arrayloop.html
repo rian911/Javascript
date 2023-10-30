@@ -56,13 +56,31 @@
       console.log(value);
     }
 
+    // Create an array of numbers
     const number = [1, 2, 3, 5, 99];
+
+    // Create a variable to store the total sum, start at 0
     let total = 0;
 
+    // Start a loop to go through each number in the array
     for (let i = 0; i < number.length; i++) {
+      // Get the current number from the array
       const num = number[i];
+
+      // Add the current number to the total sum
       total += num;
     }
+
+    // Print the total sum to the console
     console.log(total);
+
+    const numDouble = [];
+
+    for (i = 0; i < number.length; i++) {
+      const num = number[i];
+      numDouble.push(num * 2);
+    }
+
+    console.log(numDouble);
   </script>
 </html>
