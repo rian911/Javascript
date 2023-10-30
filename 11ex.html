@@ -18,5 +18,20 @@
       console.log(array[lastIndex]);
     }
     getLastValue(nums);
+    getLastValue(str);
+
+    function arraySwap(array) {
+      const lastIndex = array.length - 1;
+
+      const firstValue = array[0];
+      const lastValue = array[lastIndex];
+
+      array[0] = lastValue;
+      array[lastIndex] = firstValue;
+
+      console.log(array);
+    }
+
+    arraySwap(str);
   </script>
 </html>
