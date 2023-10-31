@@ -55,6 +55,8 @@
     }
 
     const numbre = [15, 16, 17];
+    const uno = [1, 2, 3];
+    const dos = [4, 5, 6];
 
     for (let i = 0; i < numbre.length; i++) {
       const increase = numbre[i];
@@ -79,5 +81,14 @@
     }
 
     addNum(numbre, 30);
+
+    function addArray(array1, array2) {
+      const result = [];
+      for (let a = 0; a < array1.length; a++) {
+        result.push(array1[a] + array2[a]);
+        console.log(result);
+      }
+    }
+    addArray(numbre, dos);
   </script>
 </html>
