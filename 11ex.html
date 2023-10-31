@@ -90,5 +90,21 @@
       }
     }
     addArray(numbre, dos);
+
+    function countPos(array) {
+      const result = [];
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+          result.push(array[i]);
+        } else {
+          array[i];
+        }
+      }
+      console.log(result.length);
+    }
+
+    const iro = [-1, -2, -3, 4];
+
+    countPos(iro);
   </script>
 </html>
