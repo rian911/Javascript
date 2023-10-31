@@ -56,6 +56,11 @@
 
     const numbre = [15, 16, 17];
 
+    for (let i = 0; i < numbre.length; i++) {
+      const increase = numbre[i];
+      console.log(numbre);
+    }
+
     function addOne(array) {
       for (let i = 0; i < numbre.length; i++) {
         array = numbre[i] + 1;
@@ -65,5 +70,14 @@
     }
 
     addOne(numbre);
+
+    function addNum(array, num) {
+      for (let i = 0; i < array.length; i++) {
+        const result = array[i] + num;
+        console.log(result);
+      }
+    }
+
+    addNum(numbre, 30);
   </script>
 </html>
