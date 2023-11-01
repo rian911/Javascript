@@ -106,5 +106,27 @@
     const iro = [-1, -2, -3, 4];
 
     countPos(iro);
+
+    function minMax(array) {
+      const result = {
+        min: array[0],
+        max: array[0],
+      };
+
+      for (i = 0; i < array.length; i++) {
+        const value = array[i];
+        if (value < result.min) {
+          result.min = value;
+        }
+
+        if (value > result.max) {
+          result.max = value;
+        }
+      }
+      console.log(result);
+    }
+
+    const dragon = [-4, -7, -10, 0, 2, 11];
+    minMax(dragon);
   </script>
 </html>
