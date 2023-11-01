@@ -109,17 +109,17 @@
 
     function minMax(array) {
       const result = {
-        min: array[0],
-        max: array[0],
+        min: null,
+        max: null,
       };
 
       for (i = 0; i < array.length; i++) {
         const value = array[i];
-        if (value < result.min) {
+        if (result.min === null || value < result.min) {
           result.min = value;
         }
 
-        if (value > result.max) {
+        if (result.max === null || value > result.max) {
           result.max = value;
         }
       }
@@ -128,5 +128,8 @@
 
     const dragon = [-4, -7, -10, 0, 2, 11];
     minMax(dragon);
+
+    const wey = [3];
+    minMax(wey);
   </script>
 </html>
