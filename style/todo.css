@@ -1,0 +1,26 @@
+.js-input,
+.js-date {
+  padding: 5px;
+  width: 150px;
+  margin: 5px;
+}
+
+.add {
+  background: rgb(70, 185, 70);
+  padding: 10px;
+  width: 50px;
+  border: none;
+}
+.tdList p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tdList button {
+  background-color: red;
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  font-weight: bold;
+  color: white;
+}
