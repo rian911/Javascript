@@ -13,7 +13,7 @@ function renderTodo() {
     // ini untuk penampungan nilai index didalam array
     const todo = todoList[i];
     // html digunakan untuk menampung string p + isi array
-    const html = `<p>${todo}</p>`;
+    const html = `<p>${todo}<button onclick="todoList.splice(${i}, 1); renderTodo();">Delete</button></p>`;
     // nah variabel let diatas tadi ditambah value html
     todolistHTML += html;
   }
