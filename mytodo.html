@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Todo List</p>
+    <input type="text" class="input-js" />
+    <button onclick="Addlist()">Add</button>
+    <p class="viewList"></p>
+  </body>
+  <script>
+    const todoList = [{ name: 'ngapain' }];
+    tampilTodo();
+    function tampilTodo() {
+      let todoHTML = '';
+      for (i = 0; i < todoList.length; i++) {
+        const todo = todoList[i];
+        const name = todo.name;
+
+        const html = `<p> ${name} <button onclick="todoList.splice(${i}, 1); tampilTodo();">Delete</button></p> `;
+
+        todoHTML += html;
+        document.querySelector('.viewList').innerHTML = todoHTML;
+      }
+    }
+    function Addlist() {
+      const tInput = document.querySelector('.input-js');
+      const input = tInput.value;
+
+      todoList.push({
+        name: input,
+      });
+
+      input.value = '';
+
+      tampilTodo();
+    }
+  </script>
+</html>
