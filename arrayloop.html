@@ -98,6 +98,10 @@
     // break for loop
 
     for (i = 0; i <= 10; i++) {
+      if (i === 3) {
+        continue;
+        // ini digukankan untuk skip console.log(3) dan kembali lagi ke loop
+      }
       console.log(i);
       // ini akan menampilkan hasil sampai 10
       if (i === 8) {
