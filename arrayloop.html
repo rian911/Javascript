@@ -82,5 +82,17 @@
     }
 
     console.log(numDouble);
+
+    // array are reference
+    // its save value somewhere and reference the variable to get that
+    const arra1 = [1, 2, 3, 4];
+    const arra2 = arra1;
+
+    arra1.push(5);
+    console.log(arra2);
+
+    // destructure array
+    const [firstValue, secondValue] = [1, 2, 3];
+    console.log(firstValue);
   </script>
 </html>
