@@ -74,14 +74,14 @@
     // Print the total sum to the console
     console.log(total);
 
-    const numDouble = [];
+    // const numDouble = [];
 
-    for (i = 0; i < number.length; i++) {
-      const num = number[i];
-      numDouble.push(num * 2);
-    }
+    // for (i = 0; i < number.length; i++) {
+    //   const num = number[i];
+    //   numDouble.push(num * 2);
+    // }
 
-    console.log(numDouble);
+    // console.log(numDouble);
 
     // array are reference
     // its save value somewhere and reference the variable to get that
@@ -102,6 +102,11 @@
         continue;
         // ini digukankan untuk skip console.log(3) dan kembali lagi ke loop
       }
+      if (i % 2 === 0) {
+        continue;
+        // remainder katanya
+        // klo di indo itu habis dibagi exc 2
+      }
       console.log(i);
       // ini akan menampilkan hasil sampai 10
       if (i === 8) {
@@ -109,5 +114,30 @@
         // ini akan menghentikan loop hanya sampai 8
       }
     }
+
+    // continue on while
+
+    let c = 1;
+    while (c <= 10) {
+      if (c % 2 === 0) {
+        c++;
+        continue;
+        // di while loop incrementnya harus manual seperti di atas
+      }
+      console.log(c);
+      c++;
+    }
+
+    function tryMe(array) {
+      const dataArray = [];
+      for (let i = 0; i < array.length; i++) {
+        const num = array[i];
+        dataArray.push(num * 2);
+      }
+
+      console.log(dataArray);
+    }
+
+    tryMe([1, 1, 3, 2]);
   </script>
 </html>
