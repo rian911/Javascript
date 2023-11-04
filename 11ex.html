@@ -194,5 +194,19 @@
     }
 
     console.log(index);
+    const try1 = ['pink', 'blue', 'purple'];
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          console.log(1);
+          break;
+        } else {
+          console.log(0);
+          break;
+        }
+      }
+    }
+
+    findIndex(try1, 'red');
   </script>
 </html>
