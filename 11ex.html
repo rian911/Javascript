@@ -208,5 +208,21 @@
     }
 
     findIndex(try1, 'red');
+
+    // 11r
+
+    function removeEgg(foods) {
+      let result = [];
+      for (i = 0; i < foods.length; i++) {
+        if (foods[i] === 'egg') {
+          continue;
+        } else {
+          result.push(foods[i]);
+        }
+      }
+      console.log(result);
+    }
+
+    removeEgg(['tea', 'egg', 'chocolate']);
   </script>
 </html>
