@@ -228,10 +228,11 @@
     removeEgg(['tea', 'egg', 'egg', 'egg', 'egg', 'egg', 'chocolate']);
 
     function removeStuve(array) {
+      const reversArray = array.reverse();
       const result = [];
       let rmt = 0;
 
-      for (let i = 0; i < array.length; i++) {
+      for (let i = 0; i < reversArray.length; i++) {
         if (array[i] === 'kayu' && rmt < 2) {
           rmt++;
           continue;
@@ -239,18 +240,18 @@
           result.push(array[i]);
         }
       }
-      console.log(result);
+      console.log(result.reverse());
     }
 
     removeStuve([
       'desk',
+      'kayu',
       'table',
       'chair',
       'kayu',
-      'kayu',
-      'kayu',
-      'kayu',
       'fire',
+      'kayu',
+      'kayu',
     ]);
   </script>
 </html>
