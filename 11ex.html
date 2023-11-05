@@ -226,5 +226,31 @@
     }
 
     removeEgg(['tea', 'egg', 'egg', 'egg', 'egg', 'egg', 'chocolate']);
+
+    function removeStuve(array) {
+      const result = [];
+      let rmt = 0;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 'kayu' && rmt < 2) {
+          rmt++;
+          continue;
+        } else {
+          result.push(array[i]);
+        }
+      }
+      console.log(result);
+    }
+
+    removeStuve([
+      'desk',
+      'table',
+      'chair',
+      'kayu',
+      'kayu',
+      'kayu',
+      'kayu',
+      'fire',
+    ]);
   </script>
 </html>
