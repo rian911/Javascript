@@ -1,5 +1,5 @@
 // array penampungan todolist
-const todoList = [
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [
   {
     name: 'pinjem',
     dueDate: '2022-02-02',
@@ -24,7 +24,9 @@ function renderTodo() {
     const name = todo.name;
     const dueDate = todo.dueDate;
     // html digunakan untuk menampung string p + isi array
-    const html = `<p>${name} ${dueDate}<button onclick="todoList.splice(${i}, 1); renderTodo();">Delete</button></p>`;
+    const html = `<p>${name} ${dueDate}<button onclick="todoList.splice(${i}, 1); renderTodo();
+    saveToStorage();
+    ">Delete</button></p>`;
     // nah variabel let diatas tadi ditambah value html
     todolistHTML += html;
   }
@@ -53,4 +55,8 @@ function addList() {
 
   // menjalankan fungsi diatas setiap kali add list baru
   renderTodo();
+}
+
+function saveToStorage() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
 }
