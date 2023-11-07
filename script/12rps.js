@@ -87,3 +87,10 @@ function pickComM() {
   }
   return computerMove;
 }
+
+function autoplay() {
+  setInterval(function () {
+    const playerMove = pickComM();
+    playGame(playerMove);
+  }, 1000);
+}
