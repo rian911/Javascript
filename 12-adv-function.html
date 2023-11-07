@@ -15,5 +15,27 @@
 
     console.log(test);
     test();
+
+    function run(parameter) {
+      parameter();
+    }
+
+    run(function () {
+      console.log('hai 3');
+    });
+
+    setTimeout(function () {
+      console.log('timeout');
+    }, 3000);
+
+    console.log('no wait');
+    // diatas adalah contoh asyancrounos code
+    // set time out tidak akan menghalangi console.log dijalankan
+    // karena set timeout berjalan dibelakang layar
+
+    setInterval(function () {
+      console.log('interval');
+    }, 3000);
+    // interval sama dengan set timeout tapi dia akan mengulang funsi itu terus menerus
   </script>
 </html>
