@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/12rps.css" />
+    <style></style>
+    <title>RPS</title>
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button class="buttongame" onclick=" playGame('rock')">
+      <img src="rock.png" alt="" class="icon" />
+    </button>
+    <button class="button-game" onclick=" playGame('paper')">
+      <img src="paper.png" alt="" class="icon" />
+    </button>
+    <button class="button-game" onclick=" playGame('scissors')">
+      <img src="scissors.png" alt="" class="icon" />
+    </button>
+    <p class="js-result"></p>
+    <p class="js-move"></p>
+    <p class="js-score"></p>
+    <button
+      onclick=" score.win = 0; score.lose = 0;  score.draw = 0; localStorage.removeItem('score')
+      document.querySelector(
+      '.js-score'
+    ).innerHTML = `win: ${score.win}, lose: ${score.lose}, draw: ${score.draw}`;
+      "
+    >
+      Reset Score
+    </button>
+  </body>
+  <script src="script/12rps.js"></script>
+</html>
