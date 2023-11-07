@@ -1,5 +1,5 @@
 let score = JSON.parse(localStorage.getItem('score')) || {
-  wins: 0,
+  win: 0,
   lose: 0,
   draw: 0,
 };
