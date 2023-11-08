@@ -4,7 +4,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   draw: 0,
 };
 
-updateResult();
+// updateResult();
 updateScore();
 // if (score === null) {
 //   score = {
@@ -88,9 +88,17 @@ function pickComM() {
   return computerMove;
 }
 
+let isAuto = false;
+let intervalID;
 function autoplay() {
-  setInterval(function () {
-    const playerMove = pickComM();
-    playGame(playerMove);
-  }, 1000);
+  if (!isAuto) {
+    intervalID = setInterval(function () {
+      const playerMove = pickComM();
+      playGame(playerMove);
+    }, 1000);
+    isAuto = true;
+  } else {
+    clearInterval(intervalID);
+    isAuto = false;
+  }
 }
