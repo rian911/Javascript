@@ -98,6 +98,7 @@ function autoplay() {
     }, 1000);
     isAuto = true;
   } else {
+    // untuk membuat interval berhenti
     clearInterval(intervalID);
     isAuto = false;
   }
