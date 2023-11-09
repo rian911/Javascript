@@ -18,18 +18,16 @@ function renderTodo() {
   // looping dimulai dari 0 karena i = 0
   // akan berjalan sampai i = panjang array
   // kalau tidak terpenuhi akan ditambah +1 (increment)
-  for (i = 0; i < todoList.length; i++) {
-    // ini untuk penampungan nilai index didalam array
-    const todo = todoList[i];
-    const name = todo.name;
-    const dueDate = todo.dueDate;
+  todoList.array.forEach((todo) => {
+    const { name, dueDate } = todo;
     // html digunakan untuk menampung string p + isi array
-    const html = `<p>${name} ${dueDate}<button onclick="todoList.splice(${i}, 1); renderTodo();
+    const html = `<p>${name} ${dueDate}<button onclick="todoList.splice(${index}, 1); renderTodo();
       saveToStorage();
       ">Delete</button></p>`;
     // nah variabel let diatas tadi ditambah value html
     todolistHTML += html;
-  }
+  });
+
   // kemudian dom dibawah diisi dengan value dari todolistHTML
   document.querySelector('.tdList').innerHTML = todolistHTML;
 }
