@@ -41,6 +41,10 @@
     // foreach sama seperti for loop
     // foreach ada fitur index dan value
     ['makan', 'mandi', 'tidur'].forEach(function (value, index) {
+      if (value === 'mandi') {
+        return;
+        // return ini sama seperti continue di for loop
+      }
       console.log(value, index);
     });
   </script>
