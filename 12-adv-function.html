@@ -48,11 +48,21 @@
       console.log(value, index);
     });
 
+    // 12a
     const add = function () {
       console.log(2 + 3);
     };
 
     add();
     add();
+
+    // 12b
+    function runTwice(fun) {
+      fun();
+    }
+    runTwice(function () {
+      add();
+      add();
+    });
   </script>
 </html>
