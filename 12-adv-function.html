@@ -7,6 +7,8 @@
   </head>
   <body>
     <button class="btn" onclick="iniTimeOut()">Click</button>
+    <button class="add" onclick="removeText()">Add to chart</button>
+    <p class="added"></p>
   </body>
   <script>
     // function are value
@@ -67,12 +69,21 @@
       add();
     });
 
-    // 11c
+    // 12c
     function iniTimeOut() {
       setTimeout(function () {
         document.querySelector('button').innerHTML = 'berhasil';
       }, 1000);
+      // 12d
       document.querySelector('button').innerHTML = 'Loading...';
+    }
+
+    // 12e
+    function removeText() {
+      setTimeout(function () {
+        document.querySelector('.added').innerHTML = '';
+      }, 2000);
+      document.querySelector('.added').innerHTML = 'Added';
     }
   </script>
 </html>
