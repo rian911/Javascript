@@ -79,11 +79,17 @@
     }
 
     // 12e
+    let istrue = false;
     function removeText() {
-      setTimeout(function () {
-        document.querySelector('.added').innerHTML = '';
-      }, 2000);
-      document.querySelector('.added').innerHTML = 'Added';
+      if (!istrue) {
+        setTimeout(function () {
+          document.querySelector('.added').innerHTML = '';
+        }, 2000);
+        document.querySelector('.added').innerHTML = 'Added';
+      } else {
+        clearTimeout();
+        istrue = true;
+      }
     }
   </script>
 </html>
