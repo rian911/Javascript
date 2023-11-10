@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <button class="btn" onclick="iniTimeOut()">Click</button>
+  </body>
   <script>
     // function are value
 
@@ -64,5 +66,12 @@
       add();
       add();
     });
+
+    // 11c
+    function iniTimeOut() {
+      setTimeout(function () {
+        document.querySelector('button').innerHTML = 'berhasil';
+      }, 1000);
+    }
   </script>
 </html>
