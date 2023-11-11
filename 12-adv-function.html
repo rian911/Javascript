@@ -7,7 +7,7 @@
   </head>
   <body>
     <button class="btn" onclick="iniTimeOut()">Click</button>
-    <button class="add" onclick="removeText()">Add to chart</button>
+    <button class="add" onclick="displayMessage()">Add to chart</button>
     <p class="added"></p>
   </body>
   <script>
@@ -79,17 +79,33 @@
     }
 
     // 12e
-    let istrue = false;
-    function removeText() {
-      if (!istrue) {
-        setTimeout(function () {
-          document.querySelector('.added').innerHTML = '';
-        }, 2000);
-        document.querySelector('.added').innerHTML = 'Added';
-      } else {
-        clearTimeout();
-        istrue = true;
-      }
+    // let istrue = false;
+    // function removeText() {
+    //   if (!istrue) {
+    //     setTimeout(function () {
+    //       document.querySelector('.added').innerHTML = '';
+    //     }, 2000);
+    //     document.querySelector('.added').innerHTML = 'Added';
+    //   } else {
+    //     clearTimeout();
+    //     istrue = true;
+    //   }
+    // }
+
+    let timeoutID;
+
+    function displayMessage() {
+      const messageElement = document.querySelector('.added');
+      messageElement.innerHTML = 'Added';
+
+      // first, cancel the previous time out
+      // so it doesn't remove the message too quickly;
+
+      clearTimeout(timeoutID);
+
+      timeoutID = setTimeout(function () {
+        messageElement.innerHTML = '';
+      }, 2000);
     }
   </script>
 </html>
