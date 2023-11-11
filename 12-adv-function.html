@@ -8,8 +8,10 @@
   <body>
     <button class="btn" onclick="iniTimeOut()">Click</button>
     <button class="add" onclick="displayMessage()">Add to chart</button>
-    <button class="addM" onclick="displayMessage()">Add Message</button>
-    <button class="removeM" onclick="displayMessage()">Remove Message</button>
+    <button class="addM" onclick="titleChange('add')">Add Message</button>
+    <button class="removeM" onclick="titleChange('remove')">
+      Remove Message
+    </button>
     <p class="added"></p>
   </body>
   <script>
@@ -46,10 +48,30 @@
 
     // 12g
     let countM = 0;
-    setInterval(function () {
-      const changeTitle = document.querySelector('title');
-      changeTitle.innerHTML = `(${countM++}) New message`;
-    }, 3000);
+    function titleChange(value) {
+      if (value === 'add') {
+        setInterval(function () {
+          const changeTitle = document.querySelector('title');
+          changeTitle.innerHTML = `(${countM++}) New message`;
+        }, 2000);
+      } else if (value === 'remove') {
+        setInterval(function () {
+          const changeTitle = document.querySelector('title');
+          changeTitle.innerHTML = `(${countM--}) New message`;
+        }, 2000);
+      }
+      // setInterval(function (value) {
+      //   // const btnAdd = document.querySelector('.addM');
+      //   // const removeAdd = document.querySelector('.removeM');
+      //   if (value === 'add') {
+      //     const changeTitle = document.querySelector('title');
+      //     changeTitle.innerHTML = `(${countM++}) New message`;
+      //   } else if (value === 'remove') {
+      //     const changeTitle = document.querySelector('title');
+      //     changeTitle.innerHTML = `(${countM--}) New message`;
+      //   }
+      // }, 3000);
+    }
     [
       // foreach sama seperti for loop
       // foreach ada fitur index dan value
