@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>App</title>
   </head>
   <body>
     <button class="btn" onclick="iniTimeOut()">Click</button>
     <button class="add" onclick="displayMessage()">Add to chart</button>
+    <button class="addM" onclick="displayMessage()">Add Message</button>
+    <button class="removeM" onclick="displayMessage()">Remove Message</button>
     <p class="added"></p>
   </body>
   <script>
@@ -42,9 +44,17 @@
     }, 3000);
     // interval sama dengan set timeout tapi dia akan mengulang funsi itu terus menerus
 
-    // foreach sama seperti for loop
-    // foreach ada fitur index dan value
-    ['makan', 'mandi', 'tidur'].forEach(function (value, index) {
+    // 12g
+    let countM = 0;
+    setInterval(function () {
+      const changeTitle = document.querySelector('title');
+      changeTitle.innerHTML = `(${countM++}) New message`;
+    }, 3000);
+    [
+      // foreach sama seperti for loop
+      // foreach ada fitur index dan value
+      ('makan', 'mandi', 'tidur'),
+    ].forEach(function (value, index) {
       if (value === 'mandi') {
         return;
         // return ini sama seperti continue di for loop
