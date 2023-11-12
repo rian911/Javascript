@@ -92,7 +92,7 @@ let isAuto = false;
 let intervalID;
 function autoplay() {
   if (!isAuto) {
-    intervalID = setInterval(function () {
+    intervalID = setInterval(() => {
       const playerMove = pickComM();
       playGame(playerMove);
     }, 1000);
