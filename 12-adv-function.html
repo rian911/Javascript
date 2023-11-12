@@ -62,8 +62,10 @@
     // }
 
     setInterval(function () {
-      if (document.title === 'App') {
-        document.title = `(${countM}) New message `;
+      if (countM > 0) {
+        if (document.title === 'App') {
+          document.title = `(${countM}) New message `;
+        }
       } else {
         document.title = 'App';
       }
