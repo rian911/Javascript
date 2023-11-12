@@ -10,9 +10,15 @@
     <button class="add" onclick="displayMessage()">Add to chart</button>
     <button class="addM" onclick="countM++">Add Message</button>
     <button class="removeM" onclick="countM--">Remove Message</button>
+    <button class="js-button">Click</button>
     <p class="added"></p>
   </body>
   <script>
+    const jsbutton = document.querySelector('.js-button');
+
+    jsbutton.addEventListener('click', () => {
+      console.log('click');
+    });
     // function are value
 
     const test = function () {
