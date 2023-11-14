@@ -19,10 +19,15 @@
     jsbutton.addEventListener('click', () => {
       console.log('click');
     });
-    // kelebihan addevenlister adalah bisa menggunakan beberapa kali event
-    jsbutton.addEventListener('click', () => {
+
+    const eventListener = () => {
       console.log('click2');
-    });
+    };
+    // kelebihan addevenlister adalah bisa menggunakan beberapa kali event
+    jsbutton.addEventListener('click', eventListener);
+
+    // remove event
+    jsbutton.removeEventListener('click', eventListener);
     // function are value
 
     const test = function () {
