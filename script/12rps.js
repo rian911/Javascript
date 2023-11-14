@@ -76,6 +76,13 @@ function updateScore() {
 document.querySelector('.js-rock').addEventListener('click', () => {
   playGame('rock');
 });
+document.querySelector('.js-paper').addEventListener('click', () => {
+  playGame('paper');
+});
+document.querySelector('.js-scissors').addEventListener('click', () => {
+  playGame('scissors');
+});
+
 function pickComM() {
   const randomNumber = Math.random();
 
