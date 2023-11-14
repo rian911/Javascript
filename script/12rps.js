@@ -73,6 +73,9 @@ function updateScore() {
   ).innerHTML = `win: ${score.win}, lose: ${score.lose}, draw: ${score.draw}`;
 }
 
+document.querySelector('.js-rock').addEventListener('click', () => {
+  playGame('rock');
+});
 function pickComM() {
   const randomNumber = Math.random();
 
