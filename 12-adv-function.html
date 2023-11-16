@@ -194,5 +194,17 @@
     };
 
     multiply(20, 10);
+
+    const positive = (array) => {
+      array.forEach((value, index) => {
+        if (value < 0) {
+          return;
+        } else {
+          console.log(value, index);
+        }
+      });
+    };
+
+    positive([1, -4, 5, 6]);
   </script>
 </html>
