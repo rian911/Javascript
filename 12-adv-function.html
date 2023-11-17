@@ -115,13 +115,13 @@
     });
 
     // 12c
-    function iniTimeOut() {
-      setTimeout(function () {
+    const iniTimeOut = () => {
+      setTimeout(() => {
         document.querySelector('button').innerHTML = 'berhasil';
       }, 1000);
       // 12d
       document.querySelector('button').innerHTML = 'Loading...';
-    }
+    };
 
     // 12e
     // let istrue = false;
