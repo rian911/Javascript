@@ -6,7 +6,7 @@
     <title>App</title>
   </head>
   <body>
-    <button class="btn" onclick="iniTimeOut()">Click</button>
+    <button class="btn">Click</button>
     <button class="add" onclick="displayMessage()">Add to chart</button>
     <button class="addM" onclick="countM++">Add Message</button>
     <button class="removeM" onclick="countM--">Remove Message</button>
@@ -115,6 +115,9 @@
     });
 
     // 12c
+    document.querySelector('.btn').addEventListener('click', () => {
+      iniTimeOut();
+    });
     const iniTimeOut = () => {
       setTimeout(() => {
         document.querySelector('button').innerHTML = 'berhasil';
