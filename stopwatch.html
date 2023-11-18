@@ -8,7 +8,8 @@
   <body>
     <button class="start">Start</button>
     <button class="stop">Stop</button>
-    <p class="display"></p>
+    <button class="reset">Reset</button>
+    <p class="display">0</p>
   </body>
   <script>
     let myinterval;
@@ -21,6 +22,11 @@
 
     document.querySelector('.stop').addEventListener('click', () => {
       clearInterval(myinterval);
+    });
+
+    document.querySelector('.reset').addEventListener('click', () => {
+      clearInterval(myinterval);
+      document.querySelector('.display').innerHTML = 0;
     });
   </script>
 </html>
