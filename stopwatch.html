@@ -6,15 +6,21 @@
     <title>Document</title>
   </head>
   <body>
-    <button class="start">click</button>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
     <p class="display"></p>
   </body>
   <script>
+    let myinterval;
     document.querySelector('.start').addEventListener('click', () => {
       let time = 0;
-      setInterval(() => {
+      myinterval = setInterval(() => {
         document.querySelector('.display').innerHTML = `${time++}`;
       }, 1000);
+    });
+
+    document.querySelector('.stop').addEventListener('click', () => {
+      clearInterval(myinterval);
     });
   </script>
 </html>
