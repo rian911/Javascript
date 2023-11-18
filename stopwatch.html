@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="start">click</button>
+    <p class="display"></p>
+  </body>
+  <script>
+    document.querySelector('.start').addEventListener('click', () => {
+      let time = 0;
+      setInterval(() => {
+        document.querySelector('.display').innerHTML = `${time++}`;
+      }, 1000);
+    });
+  </script>
+</html>

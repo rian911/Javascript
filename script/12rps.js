@@ -115,7 +115,7 @@ function autoplay() {
 }
 
 document.querySelector('.auto').addEventListener('onkeydown', (event) => {
-  if (event.key === 'Enter') {
+  if (event.key === 'a') {
     autoplay();
   }
 });
